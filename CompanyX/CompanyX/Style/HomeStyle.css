@@ -1,0 +1,16 @@
+﻿.mainstyle
+{
+    margin:10;
+}
+
+.intro{
+    font-size:15;
+    color:brown;
+    margin-bottom:10;
+}
+.bld {
+    font-weight: bold;
+    text-align: center;
+    color: brown;
+    font-size:18;
+}

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CompanyX.Views.InspectionList" NavigationPage.HasNavigationBar="True" >
+    <ContentPage.Resources>
+        <StyleSheet Source="../../Style/Style.css" />
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems> 
+        <ToolbarItem Command="{Binding Logout}" Text ="Logout"  
+              Priority="2" Order="Secondary" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10">
+                <ListView  ItemsSource="{Binding Inspections}" HasUnevenRows="true" SeparatorVisibility="Default"  SelectedItem="{Binding Inspection}" ItemSelected="ListView_ItemSelected">
+                    <ListView.Header >
+                        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+                            <Label TextColor="Brown" FontSize="Large" Text="Your Pending Inspections"  HorizontalOptions="FillAndExpand"  />
+                        </StackLayout>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Margin="5">
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Label HorizontalOptions="Start" FontAttributes="Bold" HorizontalTextAlignment="Start"  Text="Inspection Location"/>
+                                        <Label HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start"  Text="{Binding Location}"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Label HorizontalOptions="Start" FontAttributes="Bold" HorizontalTextAlignment="Start"  Text="Due Date"/>
+                                        <Label TextColor="Brown" HorizontalOptions="Start" HorizontalTextAlignment="Start"  Text="{Binding DueDate}"/>
+                                        <Label TextColor="Blue" HorizontalOptions="EndAndExpand"  HorizontalTextAlignment="End" Text="Start Insception"/>
+                                    </StackLayout>                                  
+                                </StackLayout>                              
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
