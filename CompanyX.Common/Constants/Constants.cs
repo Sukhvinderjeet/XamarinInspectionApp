@@ -38,7 +38,7 @@
         }
         public static class ServerUri
         {
-            public const string BaseUrl = "https://sukhnagpxamarin.azurewebsites.net/";
+            public const string BaseUrl = "";
             public const string Login = "api/login";
         }
 

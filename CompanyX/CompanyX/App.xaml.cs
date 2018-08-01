@@ -29,7 +29,7 @@ namespace CompanyX
 
         protected override void OnStart()
         {
-            AppCenter.Start("android=a98f020e-508b-4299-9da6-7b1b28741ba3;", typeof(Analytics), typeof(Crashes));
+            AppCenter.Start("", typeof(Analytics), typeof(Crashes));
             // Handle when your app starts
         }
 
